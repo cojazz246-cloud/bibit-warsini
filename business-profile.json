@@ -1,0 +1,38 @@
+{
+  "legal_identity": "Usaha Perorangan Warsini",
+  "display_brand": "Bibit Warsini",
+  "business_model": "B2B & Grosir Penyedia Bibit Tanaman Unggul",
+  "offer_description": "Penyediaan aneka bibit tanaman berkualitas tinggi meliputi benih sayuran & bunga, bibit tanaman hias taman & lanskap, bibit tanaman buah okulasi/sambung pucuk, serta bibit tanaman perkebunan dan kayu keras untuk kebutuhan proyek B2B, penghijauan lahan, reboisasi, perkebunan, maupun kebutuhan ritel pekarangan di seluruh Jawa Barat.",
+  "service_area": "Jawa Barat (Bandung, Bogor, Bekasi, Depok, Karawang, Cirebon, Sukabumi, Tasikmalaya, Garut, Subang, Purwakarta, Sumedang, Cianjur, Indramayu, Majalengka, Ciamis, Kuningan, Pangandaran, Banjar)",
+  "contact_channels": {
+    "whatsapp": "085281331249",
+    "phone": "085281331249",
+    "email": "kontak@bibitwarsini.com",
+    "operating_hours": "Layanan Konsultasi & Pemesanan 24 Jam Nonstop"
+  },
+  "prices_terms": {
+    "vegetable_flower_seeds": "Rp 1.500 – Rp 15.000 per sachet/bungkus",
+    "ornamental_plants": "Rp 5.000 – Rp 350.000 (contoh: pucuk merah Rp 5.500 s/d Rp 350.000)",
+    "fruit_plants": "Rp 15.000 – Rp 120.000 (jeruk purut Rp 14.800, durian & alpukat Rp 50.000 – Rp 120.000)",
+    "forestry_wood_plants": "Rp 1.200 – Rp 10.000 per batang (jati, sengon, paket partai besar)",
+    "payment_methods": "Transfer Bank / Tunai di Tempat / Pembayaran Bertahap untuk Kontrak Proyek B2B"
+  },
+  "licenses_claims": "Usaha pembibitan mandiri dan kemitraan kelompok tani binaan Jawa Barat, dipimpin langsung oleh Ibu Warsini",
+  "proof_assets": "Panduan eksklusif cara tanam, pemupukan organik/anorganik, penanganan aklimatisasi bibit saat tiba, dan garansi bibit segar sehat saat penyerahan",
+  "data_flow": {
+    "collected_fields": "Nama, Nomor WhatsApp, Alamat/Lokasi Pengiriman di Jawa Barat, Rincian Jenis Bibit & Jumlah Pemesanan",
+    "purpose": "Konsultasi pemilihan bibit, kalkulasi ongkos angkut/pengiriman, serta penerbitan faktur pemesanan",
+    "retention_period": "Disimpan selama periode garansi penanaman dan pendampingan pasca-kirim"
+  },
+  "target_audience": "Pelaku usaha tani, pengembang properti/perumahan, instansi proyek penghijauan, toko pertanian, dan masyarakat umum di Jawa Barat",
+  "ad_claims": {
+    "headline": "Distributor & Grosir Bibit Tanaman Unggul Terlengkap di Jawa Barat",
+    "business_name": "Bibit Warsini",
+    "final_url": "https://dvl.web.id/2DerE"
+  },
+  "cta_destination": {
+    "banner_cta": "/go/banner-cta",
+    "page_cta": "/go/page-cta"
+  },
+  "hosting_domain": "https://dvl.web.id"
+}

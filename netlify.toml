@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/go/banner-cta"
+  to = "https://dvl.web.id/2DerE"
+  status = 302
+  force = true
+  headers = { Cache-Control = "no-store", Referrer-Policy = "strict-origin-when-cross-origin" }
+
+[[redirects]]
+  from = "/go/page-cta"
+  to = "https://dvl.web.id/2DerE"
+  status = 302
+  force = true
+  headers = { Cache-Control = "no-store", Referrer-Policy = "strict-origin-when-cross-origin" }

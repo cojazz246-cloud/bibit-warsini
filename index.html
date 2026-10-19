@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibit Warsini — Distributor & Grosir Bibit Tanaman Unggul Jawa Barat</title>
+  <meta name="description" content="Pusat pembibitan dan penjualan bibit tanaman terlengkap di Jawa Barat. Melayani pengadaan B2B proyek perkebunan, penghijauan desa, dan eceran: benih sayuran, bibit buah okulasi, tanaman hias, dan bibit kayu. Lengkap dengan panduan tanam & pemupukan.">
+  <link rel="canonical" href="https://dvl.web.id/">
+
+  <!-- Integrasi Wajib 8 File Inti BSV10 -->
+  <link rel="stylesheet" href="banner.css">
+  <script defer src="setup.js"></script>
+  <script defer src="conversion-setup.js"></script>
+  <script defer src="conversion.js"></script>
+  <script defer src="work.js"></script>
+
+  <!-- Typography: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #15803d;
+      --primary-dark: #166534;
+      --primary-light: #dcfce7;
+      --accent: #ca8a04;
+      --accent-hover: #a16207;
+      --dark: #0f172a;
+      --gray-900: #1e293b;
+      --gray-700: #334155;
+      --gray-600: #475569;
+      --gray-500: #64748b;
+      --gray-200: #e2e8f0;
+      --gray-100: #f1f5f9;
+      --gray-50: #f8fafc;
+      --white: #ffffff;
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-main);
+      color: var(--gray-700);
+      background-color: var(--gray-50);
+      line-height: 1.6;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Top Notice Bar */
+    .top-bar {
+      background: #14532d;
+      color: #bbf7d0;
+      font-size: 0.85rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .badge-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #86efac;
+      font-weight: 700;
+    }
+    .badge-open::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.4);
+    }
+
+    /* Main Navbar */
+    .navbar {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 0;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .brand-logo svg {
+      width: 30px;
+      height: 30px;
+      color: var(--primary);
+    }
+    .brand-logo span {
+      color: var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    .btn-cta-nav {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 32% 28%, #4ade80 0%, #22c55e 35%, #16a34a 70%, #15803d 100%);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 
+        inset 0 2px 3px rgba(255, 255, 255, 0.7),
+        inset 0 -3px 4px rgba(0, 0, 0, 0.25),
+        0 4px 10px rgba(22, 163, 74, 0.35),
+        0 2px 4px rgba(0, 0, 0, 0.12);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .btn-cta-nav svg {
+      width: 22px;
+      height: 22px;
+      filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+      transition: transform 0.2s ease;
+    }
+    .btn-cta-nav:hover {
+      transform: translateY(-2px) scale(1.08);
+      box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.8),
+        inset 0 -3px 4px rgba(0, 0, 0, 0.2),
+        0 8px 16px rgba(22, 163, 74, 0.45),
+        0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+    .btn-cta-nav:active {
+      transform: translateY(1px) scale(0.96);
+      box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.3),
+        inset 0 -1px 2px rgba(255, 255, 255, 0.3),
+        0 2px 5px rgba(22, 163, 74, 0.3);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 60%, #ffffff 100%);
+      padding: 3.5rem 0 3rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--white);
+      border: 1px solid #bbf7d0;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1.25rem;
+    }
+    .hero-title {
+      font-size: 2.45rem;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 1.2rem;
+    }
+    .hero-title span {
+      color: var(--primary);
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--gray-600);
+      margin-bottom: 1.75rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.85rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 14px rgba(21, 128, 61, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(21, 128, 61, 0.4);
+    }
+    .btn-secondary {
+      background: var(--white);
+      color: var(--dark);
+      border: 1px solid var(--gray-200);
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: #f8fafc;
+    }
+
+    .trust-bullets {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+    .trust-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* Hero Card / Quick Quote Box */
+    .quote-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(21, 128, 61, 0.08);
+      border: 1px solid var(--gray-200);
+    }
+    .quote-header {
+      border-bottom: 1px solid var(--gray-200);
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .quote-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .quote-subtitle {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+    .rate-pill {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #166534;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .rate-pill strong {
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+    .coverage-tag {
+      background: #f8fafc;
+      padding: 0.85rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      margin: 1.25rem 0;
+      line-height: 1.5;
+      border-left: 3px solid var(--primary);
+    }
+    .btn-card-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: background 0.2s;
+    }
+    .btn-card-cta:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Section Global */
+    section {
+      padding: 4rem 0;
+    }
+    .section-title-wrap {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+    .section-tag {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+    .section-desc {
+      font-size: 1rem;
+      color: var(--gray-600);
+    }
+
+    /* Keunggulan Faktual */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.75rem;
+    }
+    .feature-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--gray-200);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .feature-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+    .feature-card p {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* Pricing & Catalog */
+    .pricing-section {
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+    .pricing-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.2s;
+    }
+    .pricing-card.featured {
+      background: var(--white);
+      border: 2px solid var(--primary);
+      box-shadow: 0 10px 30px rgba(21, 128, 61, 0.12);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      right: 1.5rem;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
+    }
+    .pricing-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 0.25rem;
+    }
+    .pricing-unit {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-bottom: 1.25rem;
+    }
+    .pricing-rate {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+    .pricing-rate span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--gray-500);
+      display: block;
+      margin-top: 0.25rem;
+    }
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+    .pricing-features li {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .pricing-features li svg {
+      width: 18px;
+      height: 18px;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .btn-pricing-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: var(--white);
+      color: var(--dark);
+      border: 1px solid var(--gray-200);
+      transition: all 0.2s;
+    }
+    .pricing-card.featured .btn-pricing-cta {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+    }
+    .btn-pricing-cta:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+    .pricing-card.featured .btn-pricing-cta:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Workflow Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .step-item {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--gray-200);
+      position: relative;
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .step-item h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+    .step-item p {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* Area Coverage Box */
+    .area-box {
+      background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .area-box h2 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .area-box p {
+      font-size: 1rem;
+      color: #dcfce7;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+    }
+    .area-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .chip {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-area-cta {
+      background: var(--white);
+      color: var(--primary-dark);
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .btn-area-cta:hover {
+      background: #f8fafc;
+      transform: translateY(-2px);
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .faq-item h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .faq-item h3 svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .faq-item p {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+      padding-left: 1.75rem;
+    }
+
+    /* Legal & Privacy Section */
+    .legal-section {
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+    }
+    .legal-box {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: 0.88rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .legal-box h3 {
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin: 1.5rem 0 0.5rem;
+    }
+    .legal-box p {
+      margin-bottom: 0.75rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      padding: 3.5rem 0 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand h4 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand p {
+      color: var(--gray-500);
+      font-size: 0.88rem;
+      max-width: 340px;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .footer-col h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer-links a {
+      color: var(--gray-500);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--white);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--gray-500);
+      font-size: 0.82rem;
+    }
+
+    /* Mobile Sticky CTA Bar (Fail-Open Support) */
+    .mobile-sticky-bar {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .hero-title {
+        font-size: 1.95rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+      .mobile-sticky-bar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 0.75rem 1rem;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+        z-index: 40;
+        border-top: 1px solid var(--gray-200);
+      }
+      .mobile-sticky-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background: var(--primary);
+        color: var(--white);
+        padding: 0.75rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+      body {
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Operational Notice -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="badge-open">
+        Layanan Konsultasi & Pemesanan 24 Jam Nonstop
+      </div>
+      <div>
+        Pusat Pembibitan Jawa Barat • Pengiriman Cepat ke Seluruh Kota & Kabupaten
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand-logo" aria-label="Bibit Warsini Beranda">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21V3m0 0a9.004 9.004 0 018.716 6.747M12 3a9.004 9.004 0 00-8.716 6.747" />
+        </svg>
+        <div>Bibit <span>Warsini</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#kategori">Kategori Bibit</a></li>
+        <li><a href="#harga">Daftar Harga</a></li>
+        <li><a href="#keunggulan">Panduan & Edukasi</a></li>
+        <li><a href="#cara-order">Alur Pemesanan</a></li>
+        <li><a href="#wilayah">Jangkauan Wilayah</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <a href="/go/page-cta" class="btn-cta-nav" aria-label="Chat WhatsApp Bibit Warsini" title="Chat WhatsApp Bibit Warsini (0852-8133-1249)">
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-tag">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Usaha Pembibitan Resmi Milik Warsini — Jawa Barat
+          </div>
+          <h1 class="hero-title">
+            Distributor & Grosir Bibit Tanaman Unggul <span>Jawa Barat</span>
+          </h1>
+          <p class="hero-desc">
+            Penyedia aneka bibit tanaman berkualitas untuk proyek B2B, perkebunan komersial, penghijauan desa/kota, hingga pekarangan rumah. Bibit sehat, adaptif iklim tanah Jawa Barat, dilengkapi <strong>panduan lengkap penanaman, pemupukan, dan penanganan saat tiba</strong>.
+          </p>
+          <div class="hero-actions">
+            <a href="/go/page-cta" class="btn-primary">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              Konsultasi & Pesan Bibit
+            </a>
+            <a href="#harga" class="btn-secondary">
+              Lihat Katalog & Tarif
+            </a>
+          </div>
+          <div class="trust-bullets">
+            <div class="trust-item">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Gratis Panduan Tanam & Pemupukan
+            </div>
+            <div class="trust-item">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Kapasitas Proyek B2B Puluhan Ribu Batang
+            </div>
+            <div class="trust-item">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Adaptif Iklim Dataran Rendah & Tinggi
+            </div>
+            <div class="trust-item">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Layanan Online Standby 24 Jam
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Summary Box -->
+        <div class="quote-card">
+          <div class="quote-header">
+            <h2 class="quote-title">Daftar Kisaran Harga Bibit</h2>
+            <p class="quote-subtitle">Harga transparan langsung dari pembibitan binaan Warsini</p>
+          </div>
+          <div class="rate-pill">
+            <span>Benih Sayuran & Bunga (Sachet)</span>
+            <strong>Rp 1.500 – Rp 15.000</strong>
+          </div>
+          <div class="rate-pill" style="background:#fefce8; border-color:#fef08a; color:#854d0e;">
+            <span>Bibit Tanaman Hias</span>
+            <strong>Rp 5.000 – Rp 350.000</strong>
+          </div>
+          <div class="rate-pill" style="background:#eff6ff; border-color:#bfdbfe; color:#1e40af;">
+            <span>Bibit Pohon Buah (Okulasi)</span>
+            <strong>Rp 15.000 – Rp 120.000</strong>
+          </div>
+          <div class="rate-pill" style="background:#f0fdf4; border-color:#bbf7d0; color:#166534;">
+            <span>Bibit Kayu & Perkebunan (B2B)</span>
+            <strong>Rp 1.200 – Rp 10.000</strong>
+          </div>
+          <div class="coverage-tag">
+            📍 <strong>Area Layanan:</strong> Seluruh Jawa Barat (Bandung, Bogor, Bekasi, Depok, Karawang, Cirebon, Sukabumi, Tasikmalaya, Garut, Subang, Purwakarta, Sumedang, Cianjur, Indramayu, Majalengka, Ciamis, Kuningan, Pangandaran, Banjar).
+          </div>
+          <a href="/go/page-cta" class="btn-card-cta">
+            Hubungi Bibit Warsini via WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keunggulan Nyata Section -->
+    <section id="keunggulan">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Nilai Tambah Nyata</span>
+          <h2 class="section-title">Mengapa Memilih Bibit Warsini?</h2>
+          <p class="section-desc">Bukan sekadar transaksi bibit, kami memberikan edukasi dan pendampingan perawatan agar tanaman Anda tumbuh optimal di lahan Jawa Barat.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+            </div>
+            <h3>Panduan Penanganan Tiba Lengkap</h3>
+            <p>Setiap pengiriman disertai lembar panduan aklimatisasi: cara membuka kemasan pengaman, karantina di tempat teduh, takaran penyiraman awal, dan teknik menghindari stres tanaman.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+            </div>
+            <h3>Petunjuk Pemupukan Berimbang</h3>
+            <p>Kami sertakan jadwal dan dosis pemupukan tepat (kombinasi organik kompos/kohe dan NPK) yang disesuaikan dengan fase vegetatif maupun generatif tanaman.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            </div>
+            <h3>Suplai Skala Proyek B2B</h3>
+            <p>Kapasitas pengadaan hingga puluhan ribu bibit kayu keras (jati, sengon, mahoni) untuk proyek reboisasi instansi, program desa, CSR perusahaan swasta, dan kontraktor lanskap.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3>Konsultasi Ramah 24 Jam</h3>
+            <p>Konsultasi seputar pemilihan varietas, kecocokan lahan, dan cek ketersediaan stok aktif 24 jam nonstop melalui layanan WhatsApp kami.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & Pricing Catalog -->
+    <section id="harga" class="pricing-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Katalog & Rincian Harga</span>
+          <h2 class="section-title">Pilihan Bibit Tanaman Unggul</h2>
+          <p class="section-desc">Pilihan varietas teruji dan siap tanam, mulai dari benih sachet hingga partai besar ribuan batang.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Kategori 1: Sayuran & Bunga -->
+          <div class="pricing-card">
+            <h3 class="pricing-title">Benih Sayuran & Bunga</h3>
+            <div class="pricing-unit">Paket Sachet / Eceran</div>
+            <div class="pricing-rate">
+              Rp 1.500 – Rp 15.000
+              <span>/ sachet kemasan rapi</span>
+            </div>
+            <ul class="pricing-features">
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Benih kangkung, bayam, sawi hijau, pakcoy</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Cabai rawit merah, cabai merah keriting, tomat, terong</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Benih bunga taman (marigold, zinnia, bunga matahari)</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Daya kecambah teruji di atas 85%</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Panduan semai praktis per varietas</li>
+            </ul>
+            <a href="/go/page-cta" class="btn-pricing-cta">Pesan Benih Sayur</a>
+          </div>
+
+          <!-- Kategori 2: Tanaman Hias -->
+          <div class="pricing-card">
+            <h3 class="pricing-title">Bibit Tanaman Hias</h3>
+            <div class="pricing-unit">Pekarangan, Taman & Trotoar</div>
+            <div class="pricing-rate">
+              Rp 5.000 – Rp 350.000
+              <span>/ pohon tergantung tinggi tanaman</span>
+            </div>
+            <ul class="pricing-features">
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Pucuk Merah (mulai Rp 5.500 s/d Rp 350.000)</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Bougenville aneka warna bunga sambungan</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Pohon peneduh: Tabebuya, Ketapang Kencana</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Media tanam stabil dalam polybag berakar kuat</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Cocok untuk pekarangan rumah, ruko, & kantor</li>
+            </ul>
+            <a href="/go/page-cta" class="btn-pricing-cta">Pesan Tanaman Hias</a>
+          </div>
+
+          <!-- Kategori 3: Pohon Buah -->
+          <div class="pricing-card featured">
+            <span class="popular-badge">PILIHAN UTAMA</span>
+            <h3 class="pricing-title">Bibit Pohon Buah</h3>
+            <div class="pricing-unit">Okulasi & Sambung Pucuk Unggul</div>
+            <div class="pricing-rate">
+              Rp 15.000 – Rp 120.000
+              <span>/ bibit siap tanam cepat berbuah</span>
+            </div>
+            <ul class="pricing-features">
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Jeruk purut wangi mulai Rp 14.800</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Durian Montong & Bawor (Rp 50rb – Rp 120rb)</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Alpukat Aligator & Miki cepat berbuah</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Mangga Arumanis, Kiojay, & Jambu Kristal</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Mulai berbuah 2–3 tahun setelah tanam</li>
+            </ul>
+            <a href="/go/page-cta" class="btn-pricing-cta">Pesan Bibit Buah</a>
+          </div>
+
+          <!-- Kategori 4: Perkebunan / Kayu (B2B) -->
+          <div class="pricing-card">
+            <h3 class="pricing-title">Bibit Kayu & Perkebunan</h3>
+            <div class="pricing-unit">Skala Proyek B2B / Grosir</div>
+            <div class="pricing-rate">
+              Rp 1.200 – Rp 10.000
+              <span>/ batang untuk kuantitas paket partai</span>
+            </div>
+            <ul class="pricing-features">
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Bibit Jati Putih & Jati Emas berkualitas</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Bibit Sengon Laut cepat panen</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Mahoni, Trembesi, Akasia, Gamal</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Stok ratusan hingga puluhan ribu batang</li>
+              <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Surat jalan & nota resmi proyek B2B siap</li>
+            </ul>
+            <a href="/go/page-cta" class="btn-pricing-cta">Pesan Kuota B2B</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Step Ordering Workflow -->
+    <section id="cara-order">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Mudah & Aman</span>
+          <h2 class="section-title">Alur Pemesanan 3 Langkah Praktis</h2>
+          <p class="section-desc">Pemesanan cepat langsung terhubung dengan pengelola pembibitan Ibu Warsini.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <h3>Hubungi Kami via WhatsApp</h3>
+            <p>Sampaikan jenis bibit yang Anda cari, estimasi jumlah batang atau paket sachet yang dibutuhkan, serta kota pengiriman Anda di Jawa Barat.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <h3>Konfirmasi Stok & Ekspedisi</h3>
+            <p>Tim kami menghitung ketersediaan fisik di kebun, rincian biaya transparan, serta opsi angkutan (armada pikap langsung atau ekspedisi kargo).</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <h3>Pengiriman & Panduan Perawatan</h3>
+            <p>Bibit dipacking rapi dengan kelembapan media terjaga, dikirim bersama lembaran panduan tanam & pemupukan resmi dari Bibit Warsini.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Area Coverage Section -->
+    <section id="wilayah">
+      <div class="container">
+        <div class="area-box">
+          <h2>Jangkauan Wilayah Layanan Jawa Barat</h2>
+          <p>Bibit Warsini melayani pengiriman bibit ke seluruh kota dan kabupaten di wilayah Jawa Barat untuk proyek pemerintah, perkebunan swasta, toko tani, maupun perorangan.</p>
+          <div class="area-chips">
+            <div class="chip">📍 Bandung Raya & Cimahi</div>
+            <div class="chip">📍 Bogor, Depok, & Bekasi</div>
+            <div class="chip">📍 Karawang, Purwakarta, & Subang</div>
+            <div class="chip">📍 Cirebon, Indramayu, Majalengka, Kuningan</div>
+            <div class="chip">📍 Sukabumi & Cianjur</div>
+            <div class="chip">📍 Tasikmalaya, Garut, Ciamis, Banjar, Pangandaran</div>
+          </div>
+          <a href="/go/page-cta" class="btn-area-cta">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Konsultasikan Kebutuhan Proyek Bibit Anda
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Tanya Jawab</span>
+          <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+          <p class="section-desc">Jawaban transparan seputar bibit tanaman, perlakuan pertama saat tiba, dan sistem pengiriman di Jawa Barat.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 10-1-1zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+              Bagaimana cara penanganan pertama saat bibit baru sampai di rumah?
+            </h3>
+            <p>
+              Segera buka pembungkus kardus atau karung pengaman, letakkan bibit di tempat yang teduh dan berangin (hindari paparan sinar matahari terik langsung selama 2–4 hari). Siram media tanam secukupnya dengan air bersih. Jangan langsung diberi pupuk kimia keras sampai tanaman pulih dari stres perjalanan.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 10-1-1zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+              Apakah melayani kontrak pasokan bibit dalam jumlah besar (B2B)?
+            </h3>
+            <p>
+              Ya, Bibit Warsini melayani kemitraan B2B dengan pengembang lanskap perumahan, instansi pemerintah desa (program dana desa penghijauan & ketahanan pangan), dan perkebunan swasta di Jawa Barat. Kami menyediakan stok puluhan ribu batang bibit kayu dan pohon buah lengkap dengan nota dan surat jalan resmi.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 10-1-1zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+              Kapan bibit pohon buah hasil okulasi mulai berbuah?
+            </h3>
+            <p>
+              Bibit buah okulasi dan sambung pucuk unggul (durian montong/bawor, alpukat aligator/miki, mangga) umumnya mulai berbunga dan berbuah pada usia 2–3 tahun setelah tanam di lahan terbuka, jauh lebih cepat dibanding bibit asal biji.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 10-1-1zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+              Bagaimana metode pembayaran dan opsi pengiriman ke wilayah Jawa Barat?
+            </h3>
+            <p>
+              Kami menyediakan opsi pengantaran langsung via armada pikap/truk untuk kuantitas banyak, ekspedisi kargo cepat untuk paket bibit, serta pembayaran via transfer bank atau tunai di tempat. Untuk proyek B2B skala besar, skema termin bertahap dapat disepakati dalam kontrak kerja.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privasi" class="legal-section">
+      <div class="container">
+        <div class="legal-box">
+          <div class="section-title-wrap" style="margin-bottom:1.5rem;">
+            <span class="section-tag">Transparansi Informasi</span>
+            <h2 class="section-title" style="font-size:1.6rem;">Kebijakan Privasi & Ketentuan Layanan</h2>
+          </div>
+          <p>
+            Halaman ini dikelola dan dimiliki secara sah oleh <strong>Usaha Perorangan Warsini</strong> (pemilik brand dagang <strong>Bibit Warsini</strong>), beroperasi di Jawa Barat.
+          </p>
+          <h3>1. Pengumpulan Informasi Pelanggan</h3>
+          <p>
+            Kami hanya mengumpulkan data kontak yang Anda berikan secara sadar saat berkomunikasi melalui WhatsApp atau telepon (seperti Nama, Nomor Telepon, Alamat Pengiriman di Jawa Barat, serta Rincian Pesanan Bibit). Informasi ini dipergunakan murni untuk kepentingan verifikasi ketersediaan stok, pengiriman logistik, penagihan, dan pemberian panduan perawatan tanaman.
+          </p>
+          <h3>2. Kerahasiaan Data & Non-Disclose</h3>
+          <p>
+            Kami tidak memperjualbelikan, menyewakan, atau mendistribusikan data pribadi Anda kepada pihak ketiga manapun untuk tujuan pemasaran periklanan yang tidak berkaitan dengan layanan pembibitan Bibit Warsini.
+          </p>
+          <h3>3. Hak Pelanggan & Pembaruan</h3>
+          <p>
+            Pelanggan memiliki hak penuh untuk meminta klarifikasi, perbaikan data, atau penghapusan data kontak dari basis data kami setelah seluruh transaksi dan pendampingan bibit selesai dengan menghubungi kontak resmi 085281331249.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="kontak">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Bibit Warsini</h4>
+          <p>Penyedia dan distributor bibit tanaman unggul (sayur, buah okulasi, tanaman hias, dan bibit kayu perkebunan) di seluruh wilayah Jawa Barat.</p>
+          <p style="font-size:0.85rem; color:#94a3b8;">
+            <strong>Identitas Usaha:</strong> Perorangan milik Warsini<br>
+            <strong>Layanan Online:</strong> Siap Melayani 24 Jam Nonstop
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Navigasi Halaman</h5>
+          <ul class="footer-links">
+            <li><a href="#kategori">Kategori Bibit</a></li>
+            <li><a href="#harga">Daftar Harga</a></li>
+            <li><a href="#keunggulan">Panduan Tanam</a></li>
+            <li><a href="#cara-order">Alur Pemesanan</a></li>
+            <li><a href="#wilayah">Wilayah Jawa Barat</a></li>
+            <li><a href="#faq">Pertanyaan Umum</a></li>
+            <li><a href="#privasi">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kanal Kontak Resmi</h5>
+          <ul class="footer-links">
+            <li><a href="/go/page-cta">WhatsApp: 0852-8133-1249</a></li>
+            <li><a href="tel:085281331249">Telepon: 0852-8133-1249</a></li>
+            <li><a href="mailto:kontak@bibitwarsini.com">kontak@bibitwarsini.com</a></li>
+            <li><span>Wilayah Layanan: Seluruh Jawa Barat</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Bibit Warsini — Usaha Perorangan Warsini. Seluruh hak cipta dilindungi.
+        </div>
+        <div>
+          Pusat Pembibitan Tanaman Berkualitas Jawa Barat
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA Bar (Fail-Open Support) -->
+  <div class="mobile-sticky-bar">
+    <a href="/go/page-cta">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Konsultasi Bibit Warsini via WhatsApp (24 Jam)
+    </a>
+  </div>
+
+</body>
+</html>
